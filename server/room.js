@@ -37,7 +37,7 @@ class Room {
     this.createdAt = Date.now(); this.lastActive = Date.now();
     this.players = new Map(); this.order = []; this.hostId = null;
     this.tvs = new Set(); this.banned = new Set();
-    this.settings = { spice: 'normal', timer: 'normal', photoSource: 'mix', display: 'auto', rounds: 2 };
+    this.settings = { spice: 'normal', timer: TIMER_MULT[process.env.CHAOS_TIMER] ? process.env.CHAOS_TIMER : 'normal', photoSource: 'mix', display: 'auto', rounds: 2 };
     this.phase = 'lobby'; this.stage = null; this.paused = false;
     this.seenModes = new Set(); this.currentMode = null;
     this.user = { prompts: [], scenarios: [], names: [] };
