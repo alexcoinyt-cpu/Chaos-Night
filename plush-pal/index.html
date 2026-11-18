@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#2a1f3d">
+<title>Plush Pal Chaos Lab</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <canvas id="c"></canvas>
+  <div id="hud">
+    <div class="chip" id="coins">🪙 <b>0</b></div>
+    <div id="meter" title="Combo multiplier"><i></i><span>x1</span></div>
+    <div class="chip" id="lvl">Lv <b>1</b><u><i></i></u></div>
+    <div class="grow"></div>
+    <button class="ibtn" id="btnMute" aria-label="Mute">🔊</button>
+    <button class="ibtn" id="btnMenu" aria-label="Menu">☰<em id="menuDot" hidden></em></button>
+  </div>
+  <div id="side">
+    <button class="big" id="btnStitch">🧵<small>Stitch him back</small></button>
+    <button class="ibtn" id="btnRegen" title="Auto-regen">♻️</button>
+    <button class="ibtn" id="btnReplay" title="Replay biggest hit">🎬</button>
+    <button class="ibtn" id="btnShot" title="Screenshot">📸</button>
+    <button class="ibtn" id="btnClear" title="Clear props &amp; devices">🧹</button>
+  </div>
+  <div id="stuffbar" title="Stuffing"><i></i></div>
+  <div id="toolhint"></div>
+  <div id="dock">
+    <div id="rube" hidden></div>
+    <div id="cats"></div>
+    <div id="tools"></div>
+  </div>
+  <div id="modal" hidden><div id="sheet"><button class="x" id="modalX">✕</button><div id="sheetBody"></div></div></div>
+  <div id="drop" hidden>Drop an image to dress Dumpling 🖼️</div>
+  <div id="toast"></div>
+</div>
+<script src="vendor/matter.min.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
